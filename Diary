@@ -1,0 +1,14 @@
+A better way and The cleanest and most robust way to use a Javascript library in a Vue project is to proxy it to a property of the Vue prototype object. Let's do that to add the Moment date and time library to our project:
+
+entry.js
+
+import moment from 'moment';
+Object.defineProperty(Vue.prototype, '$moment', { value: moment });
+Since all components inherit their methods from the Vue prototype object this will make Moment automatically available across any and all components with no global variables or anything to manually import. It can simply be accessed in any instance/component from this.$moment:
+
+MyNewComponent.vue
+export default {
+  created() {
+    console.log('The time is ' . this.$moment().format("HH:mm"));
+  }
+}
