@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<div class = "container">
+    <div class="jumbotron">
+        <h1>Let's Have Fun!</h1>
+        <button id="btn1">#btn1</button>
+        <button id="btn2">#btn2</button>
+        <button id="btn3">#btn3</button>
+        <button id="btn4">#btn4</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-3">
+        <div id="panel1" class="panel panel-primary">
+            <div class="panel-heading">
+                #panel1
+            </div>
+            <div class="panel-body">content
+            </div>
+        </div>
+    </div>
+</div>
+<body>
+   <h1>Hello World</h1> 
+   <script src="index.js">
+   </script>
+   <script src="node_modules/jquery/src/jquery.js"></script>
+
+   <script>
+       $(function(){
+           $('#panel1').html('my panel');
+           $('#btn1'.on('click',function(){
+                $('#panel1').toggle();
+           });
+       })
+   </script>
+</body>
+</html>
