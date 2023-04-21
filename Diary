@@ -10,5 +10,5 @@ MyNewComponent.vue
 export default {
   created() {
     console.log('The time is ' . this.$moment().format("HH:mm"));
-  }3333
+  }333311111
 }1111111
